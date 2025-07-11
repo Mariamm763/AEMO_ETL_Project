@@ -1,33 +1,63 @@
 # AEMO_ETL_Project
 
-The aim of this project is to automate the extraction of electricity price and demand data from the Australian Energy Market Operator (AEMO) into Python.
-To enable more accurate analysis and forecasting, the project focuses on compiling complete yearly datasets across all five NEM regions (NSW, VIC, QLD, SA, TAS).
+This project automates the extraction and structuring of electricity price and demand data from the Australian Energy Market Operator (AEMO) into Python and SQL databases. The goal is to support time series forecasting and market analysis across all five National Electricity Market (NEM) regions.
 ___
 #  Data Coverage
+- Automatically downloads and compiles data for:
+ NSW, VIC, QLD, SA, TAS
 
-The script automatically downloads **all five NEM regions (NSW, VIC, QLD, SA, TAS)** across multiple years.  
-This is particularly useful for statistical models like **ARIMA**, which require multiple years of continuous data for accurate forecasting.
+- Supports multi-year extraction for long-term trend analysis
+
+- Ideal for statistical models such as ARIMA and machine learning pipelines
 
 ###  Time Granularity
 
-The database stores **5-minute interval data** — the finest resolution available — allowing users to:
+-Data is stored at 5-minute resolution — the most granular available
 
-- Aggregate up to **hourly** or **daily** summaries
-- Perform precise short-term load forecasting
-- Avoid early assumptions about temporal resolution
+- Easily aggregate to:
 
-This structure gives you full control over how much to aggregate, depending on your modeling needs.
+- Hourly, daily, or custom time intervals
+
+- Supports: 
+
+  - Short-term load forecasting
+
+  - Peak demand analysis
+
+- Price signal modeling
 
 ###  Usability & Integration
+- Designed for seamless use in:
 
-The SQL structure is optimized for **usability in tools like Power BI and Python (pandas)**:
+- Python (Pandas)
 
-- Create SQL **views** to simplify queries and aggregations
-- Easily export to CSV for analysis in Python notebooks
-- Fast loading into Power BI for visualization dashboards
+- Power BI
+
+- SQL-based querying
+
+- Features:
+
+  - SQL views for simplified analysis
+
+  - CSV export options
+
+  - Fast loading into dashboards
 
 Database stucture
 ___
+
+- 5-minute interval data stored by year and region
+
+- Easily extendable with:
+
+  - Renewable generation
+
+  - Interconnector flow
+
+  - Emissions
+
+  - Market bidding data
+
 
 <img width="605" height="372" alt="Screenshot 2025-07-10 122830" src="https://github.com/user-attachments/assets/c9d7aba7-23a2-4fea-929d-9f383c8585df" />
 
